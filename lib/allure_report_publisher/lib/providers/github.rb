@@ -90,7 +90,7 @@ module Publisher
       #
       # @return [String]
       def pr_description
-        @pr_description ||= client.pull_request(repository, pr_id)[:body]
+        @pr_description ||= client.pull_request(repository, pr_id)[:body] || ""
       end
 
       # Pull request id
